@@ -77,7 +77,7 @@ new Array(9).fill()
       value,
       children: []
     };
-});
+  });
 
 const children = {
   1: [2, 3, 4],
@@ -97,8 +97,6 @@ function dfs(root) {
     .forEach(child => dfs(child));
 }
 
-//dfs(nodesHash[1]);
-
 const queue = [
   nodesHash[1]
 ];
@@ -109,9 +107,11 @@ function bfs() {
   queue.push(...elem.children);
 }
 
-while (queue.length) {
+/*while (queue.length) {
   bfs();
-}
+}*/
+
+const string = 'hyu';
 
 /*console.log(insertionSort(test));
 console.log(insertionSort(test2));
