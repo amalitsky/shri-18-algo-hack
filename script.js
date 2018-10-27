@@ -21,5 +21,29 @@ function bubbleSort(arr) {
   return arr;
 }
 
-console.log(bubbleSort(test));
-console.log(bubbleSort(test2));
+function selectionSort(arr) {
+  const {length} = arr;
+  let max;
+  let maxIndex;
+
+  for (let j = length; j > 0; j--) {
+    max = -Infinity;
+    maxIndex = NaN;
+
+    for (let i = 0; i < j; i++) {
+      if (arr[i] > max) {
+        max = arr[i];
+        maxIndex = i;
+      }
+    }
+
+    if (maxIndex !== j - 1) {
+      swapArrElements(arr, maxIndex, j - 1);
+    }
+  }
+
+  return arr;
+}
+
+console.log(selectionSort(test2));
+console.log(selectionSort(test));
