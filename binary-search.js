@@ -12,14 +12,7 @@ function binarySearch(arr, needle) {
       throw 'f**d up';
     }
 
-    if (start === end) {
-      if (arr[start] === needle) {
-        return start;
-      }
-      return;
-    }
-
-    if ((end - start) === 1) {
+    if (end - start <= 1) {
       if (needle === arr[start]) {
         return start;
       }
