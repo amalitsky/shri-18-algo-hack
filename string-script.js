@@ -2,6 +2,7 @@
 
 const goodString = 'aaa({[]})asad'; //'afasdf823{asdfasfsd[]}[{()}]{}(((ASFASDF)093143)1234)';
 const badString = '(){}[]()adasf789asdf]';
+const badString2 = 'aaa({[]})asad)';
 
 const typeByChar = {
   '(': 1,
@@ -12,9 +13,7 @@ const typeByChar = {
   '{': 3
 };
 
-const stack = [
-
-];
+const stack = [];
 
 const
   anyRegex = /[\[\]\{\}()]/,
@@ -39,5 +38,6 @@ function strChecker(str) {
   return stack.length === 0;
 }
 
-console.log(strChecker(goodString));
+/*console.log(strChecker(goodString));
 console.log(strChecker(badString));
+console.log(strChecker(badString2));*/
