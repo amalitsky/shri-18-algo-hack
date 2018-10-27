@@ -1,8 +1,8 @@
 'use strict';
 
-const test = [3, 45, 6, 7, 0, 1, 21, 11, 99, 6, 7, 3];
+/*const test = [3, 45, 6, 7, 0, 1, 21, 11, 99, 6, 7, 3];
 const test2 = [0, 1, 3, 3, 6, 6, 7, 7, 11, 21, 45, 99].reverse();
-const test3 = [0, 1, 3, 3, 6, 6, 7, 7, 11, 21, 45, 99];
+const test3 = [0, 1, 3, 3, 6, 6, 7, 7, 11, 21, 45, 99];*/
 
 function swapArrElements(arr, i, j) {
   const temp = arr[i];

@@ -21,6 +21,6 @@ function getPrimeNumbers(upperBoundary) {
   return res;
 }
 
-console.log(
+/*console.log(
   getPrimeNumbers(100)
-);
+);*/
