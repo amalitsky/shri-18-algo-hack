@@ -1,0 +1,12 @@
+{
+  "name": "algohack",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "Alex Malitsky <a.malitsky@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-google": "^0.11.0"
+  }
+}
