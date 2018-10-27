@@ -51,11 +51,15 @@ function selectionSort(arr) {
 function insertionSort(arr) {
   const {length} = arr;
 
-  for (let j = length - 1; j >= 0; j--) {
+  for (let j = length - 1; j >= 1; j--) {
     if (arr[j - 1] > arr[j]) {
-      for (let i = j; i < length; i++) {
-        if (arr[i - 1] > arr[i]) {
-          swapArrElements(arr, i - 1, i);
+      const elem = arr[j - 1];
+      for (let i = j; i <= length; i++) {
+        if (elem <= arr[i] || i === length) {
+          arr[i - 1] = elem;
+          break;
+        } else {
+          arr[i - 1] = arr[i];
         }
       }
     }
