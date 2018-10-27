@@ -97,7 +97,21 @@ function dfs(root) {
     .forEach(child => dfs(child));
 }
 
-dfs(nodesHash[1]);
+//dfs(nodesHash[1]);
+
+const queue = [
+  nodesHash[1]
+];
+
+function bfs() {
+  const elem = queue.shift();
+  console.log(elem.value);
+  queue.push(...elem.children);
+}
+
+while (queue.length) {
+  bfs();
+}
 
 /*console.log(insertionSort(test));
 console.log(insertionSort(test2));
