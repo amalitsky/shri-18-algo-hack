@@ -68,6 +68,37 @@ function insertionSort(arr) {
   return arr;
 }
 
-console.log(insertionSort(test));
+const nodesHash = {};
+
+new Array(9).fill()
+  .forEach((id, index) => {
+    const value = index + 1;
+    nodesHash[value] = {
+      value,
+      children: []
+    };
+});
+
+const children = {
+  1: [2, 3, 4],
+  2: [5, 6],
+  4: [7, 8, 9]
+};
+
+Object.keys(children).forEach(id => {
+  nodesHash[id].children.push(
+    ...children[id].map(id => nodesHash[id])
+  );
+});
+
+function dfs(root) {
+  console.log(root.value);
+  root.children
+    .forEach(child => dfs(child));
+}
+
+dfs(nodesHash[1]);
+
+/*console.log(insertionSort(test));
 console.log(insertionSort(test2));
-console.log(insertionSort(test3));
+console.log(insertionSort(test3));*/
