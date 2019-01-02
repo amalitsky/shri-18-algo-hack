@@ -51,7 +51,7 @@ function selectionSort(arr) {
 function insertionSort(arr) {
   const {length} = arr;
 
-  for (let j = length - 1; j >= 1; j--) {
+  for (let j = length - 1; j > 0; j--) {
     if (arr[j - 1] > arr[j]) {
       const elem = arr[j - 1];
       for (let i = j; i <= length; i++) {
